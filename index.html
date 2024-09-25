@@ -1,3 +1,6 @@
+header h1  {
+  background-image: linear-gradient( rgb(218, 149, 21), purple)
+  }
 
 
 <!DOCTYPE html>
@@ -76,6 +79,53 @@ footer{
   margin: 20px;
 }
 
+    h2 {
+      text-align: center;
+
+
+
+
+    }
+
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+
+    label,
+    input {
+      display: block;
+      margin-bottom: 10px
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor:pointer;
+    }
+    input[type="submit"] :hover{
+    background-color:0056b3
+    }
 
 </style>
 
@@ -94,7 +144,7 @@ footer{
         <li><a href="#sobre">𝔖𝔬𝔟𝔯𝔢 𝔐𝔦𝔪</a></li>
         <li><a href="#projetos">𝔓𝔯𝔬𝔧𝔢𝔱𝔬𝔰</a></li>
         <li><a href="#contato">ℭ𝔬𝔫𝔱𝔞𝔱𝔬</a></li>
-          <li><a href="#cadastro">ℭ𝔬𝔫𝔱𝔞𝔱𝔬</a></li>
+          <li><a href="#cadastro">𝕮𝖆𝖉𝖆𝖘𝖙𝖗𝖆𝖗</a></li>
       </ul>
     </nav>
   </header>
@@ -126,13 +176,28 @@ footer{
       <li>Projeto 2: <a href="#"> 𝔇𝔢𝔰𝔠𝔯𝔦𝔠̧𝔞̃𝔬 𝔡𝔬 𝔓𝔯𝔬𝔧𝔢𝔱𝔬 2</a> </li>
       <li>Projeto 3: <a href="#"> 𝔇𝔢𝔰𝔠𝔯𝔦𝔠̧𝔞̃𝔬 𝔇𝔢 𝔓𝔯𝔬𝔧𝔢𝔱𝔬 3</a> </li>
     </ul>
+    
   </section>
-  <section id="contato">
+  <section id="cadastro">
+
+  <h2> Cadastro De Pessoas </h2>
+  <form>
+    <label> Nome </label>
+    <input type="text" id"nome" name="nome" required>
+    <label> Email </label>
+    <input type="email" id"email" name="email" required>
+    <label> Telefone </label>
+    <input type="tel" id"telefone" name="telefone" required>
+    <input type="submit" value="cadastrar">
+</form>
+
+
+    </section>
     <h2> 𝕮𝖔𝖓𝖙𝖆𝖙𝖔 </h2>
     <p> Entre em contato via Gmail <a
         href="mailto:kaua_c_garcia@estudante.sesisenai.org.br">kaua_c_garcia@estudante.sesisenai.org.br</a> . </p>
   </section>
-<!DOCTYPE html>
+
 <html>
 
 
@@ -183,35 +248,9 @@ footer{
     }
 
 
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #007bff;
-      color: #fff;
-      cursor:pointer;
-    }
-    input[type="submit"] :hover{
-    background-color:0056b3
-   
-    }
+    
+  
   </style>
-  <title> Meu Cadastro </title>
-
-
-<body>
-  <h2> Cadastro De Pessoas </h2>
-  <form>
-    <label> Nome </label>
-    <input type="text" id"nome" name="nome" required>
-    <label> Email </label>
-    <input type="email" id"email" name="email" required>
-    <label> Telefone </label>
-    <input type="tel" id"telefone" name="telefone" required>
-    <input type="submit" value="cadastrar">
-</body>
-</head>
 
 
 
@@ -224,7 +263,6 @@ footer{
 
 
 
-</html>
 
 
 
