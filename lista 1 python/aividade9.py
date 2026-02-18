@@ -1,0 +1,5 @@
+camisetap = input("Insira o tanto de camisas p : ")
+camisetam = input("Insira o tanto de camisas pm: ")
+camisetag = input("Insira o tanto de camisas g: ")
+total = (camisetap * 10) + (camisetam * 12) + (camisetag * 15)
+print("O valor total a ser pago é de R$ ",total)

@@ -1,0 +1,7 @@
+horas = float(input("insira a quantidade de horas sem acidentes:"))
+dias  = float input ("input a quantidade de dias sem acidentes:")
+anos = (horas / 8760) + (dias / 365)
+print("O numero de anos sem acidentes é de: ", anos)
+print("a quantidade de meses sem acidentes é de: ", anos * 12)
+print("a quantidade de dias sem acidentes é de: ", anos * 365)
+print("a quantidade de horas sem acidentes é de: ", anos * 8760)

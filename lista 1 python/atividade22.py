@@ -1,0 +1,8 @@
+moedas1 = float(input("Insira a quantidade de moedas de 1 real: "))
+moedas50 = float(input("Insira a quantidade de moedas de 50 centavos: "))
+moedas25 = float(input("Insira a quantidade de moedas de 25 centavos: "))
+moedas10 = float(input("Insira a quantidade de moedas de 10 centavos: "))
+moedas5 = float(input("Insira a quantidade de moedas de 5 centavos: "))
+moedas1cent = float(input("Insira a quantidade de moedas de 1 centavo: "))
+poupou = (moedas1 * 1) + (moedas50 * 0.50) + (moedas25 * 0.25) + (moedas10 * 0.10) + (moedas5 * 0.05) + (moedas1cent * 0.01)
+print(f"O valor total que o pedrinho poupou é de: R$ {poupou}.")
