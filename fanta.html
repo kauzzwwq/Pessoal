@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">  
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refrigerantes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Montserrat',sans-serif;background:#111;color:#fff;overflow-x:hidden}
+
+/* NAV */
+.barra-topo{display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:orange;transition:.5s}
+.logo img{height:120px}
+.menu a{margin-left:30px;color:#fff;text-decoration:none;cursor:pointer}
+
+/* HERO */
+.hero{display:flex;justify-content:space-around;align-items:center;height:100vh;background:orange;transition:.5s;position:relative;padding:0 80px}
+.bg-text{position:absolute;font-size:200px;font-family:'Oswald';opacity:.07;top:20%;right:5%}
+
+.texto{max-width:520px}
+.texto h1{font-size:80px;margin:0;font-family:'Oswald';line-height:85px}
+.texto p{font-size:18px;margin-top:20px;opacity:.9}
+
+.botao-comprar{
+ margin-top:25px;
+ padding:14px 30px;
+ border:none;
+ border-radius:10px;
+ font-weight:700;
+ cursor:pointer;
+ background:#fff;
+ color:#000;
+ transition:.3s;
+}
+.botao-comprar:hover{transform:scale(1.08)}
+
+.hero img{width:520px;cursor:pointer;transition:.5s}
+.hero img:hover{transform:scale(1.08) rotate(-3deg)}
+
+/* PRODUTOS */
+.produtos{padding:120px 60px;text-align:center;background:linear-gradient(180deg,#111,#000)}
+.produtos h2{font-family:'Oswald';font-size:50px;margin-bottom:70px}
+.cards{display:flex;justify-content:center;gap:60px}
+.card{background:#1c1c1c;padding:30px;border-radius:20px;cursor:pointer;width:220px;transition:.4s}
+.card:hover{transform:translateY(-15px) scale(1.1)}
+.card img{width:180px;transition:.4s}
+.card img:hover{transform:scale(1.1)}
+.preco{font-weight:600;margin-top:10px}
+
+/* OVERLAY */
+.overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px;z-index:999;animation:fade .4s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+.overlay img{width:600px;margin-bottom:20px;animation:zoom .4s}
+@keyframes zoom{from{transform:scale(.6)}to{transform:scale(1)}}
+
+.overlay h1{font-family:'Oswald';font-size:70px;margin:10px}
+.overlay p{max-width:700px;font-size:18px}
+
+.fechar{position:absolute;top:25px;right:30px;font-size:28px;cursor:pointer;background:white;color:black;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-weight:bold}
+
+.info{margin-top:20px;opacity:.8}
+
+</style>
+</head>
+
+<body>
+
+<div class="barra-topo" id="barra">
+ <div class="logo"><img src="img/fantalogo.png"></div>
+ <div class="menu">
+  <a onclick="trocar('laranja')">Home</a>
+  <a href="#produtos">Categorias</a>
+  <a>Sobre</a>
+  <a href="#contato">Contato</a>
+ </div>
+</div>
+
+<div class="hero" id="hero">
+ <div class="bg-text" id="bg">Laranja</div>
+ 
+ <div class="texto">
+  <h1 id="titulo">Fanta Laranja</h1>
+  <p id="desc">
+   A Fanta Laranja é uma bebida refrescante e cheia de sabor, perfeita para qualquer momento.
+   Com seu sabor cítrico marcante e borbulhas geladas, ela é uma das bebidas mais populares do mundo.
+  </p>
+  <button class="botao-comprar" onclick="comprar()">Comprar agora</button>
+ </div>
+
+ <img id="img" src="img/fantalata.png" onclick="abrir()">
+</div>
+
+<div class="produtos" id="produtos">
+ <h2>Você pode gostar</h2>
+ <div class="cards">
+
+  <div class="card" onclick="trocar('laranja')">
+   <img src="img/fantalata.png">
+   <p>Fanta Laranja</p>
+   <p class="preco">R$ 8,00</p>
+  </div>
+
+  <div class="card" onclick="trocar('uva')">
+   <img src="img/uvalata.png">
+   <p>Fanta Uva</p>
+   <p class="preco">R$ 8,00</p>
+  </div>
+
+  <div class="card" onclick="trocar('coca')">
+   <img src="img/cocalata.png">
+   <p>Coca-Cola</p>
+   <p class="preco">R$ 10,00</p>
+  </div>
+
+ </div>
+</div>
+
+<!-- CONTATO -->
+<div id="contato" style="background:#000;padding:50px;text-align:center">
+ <h2 style="font-family:'Oswald';font-size:40px;margin-bottom:20px">Contato</h2>
+ <p>Email: kaua_c_garcia@estudante.sesisenai.org.br</p>
+ <p>GitHub: <a href="https://github.com/kauzzwwq/" target="_blank" style="color:#fff">github.com/kauzzwwq</a></p>
+ <p>WhatsApp: <a href="https://api.whatsapp.com/send/?phone=5549999695059" target="_blank" style="color:#fff">Falar no WhatsApp</a></p>
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="fecharFora(event)">
+ <div class="fechar" onclick="fechar()">✖</div>
+ <img id="imgGrande" src="img/fantalata.png">
+ <h1 id="tituloGrande">Fanta Laranja</h1>
+ <p id="descGrande">Refrescante e cheia de sabor com o melhor sabor de laranja.</p>
+ <div class="info" id="infoExtra">Bebida gaseificada • 350ml • Sabor Laranja</div>
+ <button class="botao-comprar" onclick="comprar()">Comprar</button>
+</div>
+
+<script>
+function trocar(tipo){
+ let hero=document.getElementById('hero')
+ let barra=document.getElementById('barra')
+ let titulo=document.getElementById('titulo')
+ let desc=document.getElementById('desc')
+ let img=document.getElementById('img')
+ let bg=document.getElementById('bg')
+ let imgGrande=document.getElementById('imgGrande')
+ let tituloGrande=document.getElementById('tituloGrande')
+ let descGrande=document.getElementById('descGrande')
+ let info=document.getElementById('infoExtra')
+
+ if(tipo==='laranja'){
+  hero.style.background='orange'
+  barra.style.background='orange'
+  titulo.innerText='Fanta Laranja'
+  desc.innerText='A Fanta Laranja é uma bebida refrescante e cheia de sabor.'
+  img.src='img/fantalata.png'
+  bg.innerText='Laranja'
+  imgGrande.src='img/fantalata.png'
+  tituloGrande.innerText='Fanta Laranja'
+  descGrande.innerText='Refrigerante sabor laranja com gás.'
+  info.innerText='Bebida gaseificada • 350ml • Laranja'
+ }
+
+ if(tipo==='uva'){
+  hero.style.background='purple'
+  barra.style.background='purple'
+  titulo.innerText='Fanta Uva'
+  desc.innerText='Sabor doce e marcante.'
+  img.src='img/uvalata.png'
+  bg.innerText='Uva'
+  imgGrande.src='img/uvalata.png'
+  tituloGrande.innerText='Fanta Uva'
+  descGrande.innerText='Refrigerante sabor uva com gás.'
+  info.innerText='Bebida gaseificada • 350ml • Uva'
+ }
+
+ if(tipo==='coca'){
+  hero.style.background='red'
+  barra.style.background='red'
+  titulo.innerText='Coca-Cola'
+  desc.innerText='O refrigerante mais famoso do mundo.'
+  img.src='img/cocalata.png'
+  bg.innerText='Coca'
+  imgGrande.src='img/cocalata.png'
+  tituloGrande.innerText='Coca-Cola'
+  descGrande.innerText='Sabor único e refrescante.'
+  info.innerText='Bebida gaseificada • 350ml • Coca-Cola'
+ }
+}
+
+function abrir(){document.getElementById('overlay').style.display='flex'}
+function fechar(){document.getElementById('overlay').style.display='none'}
+function fecharFora(event){if(event.target.id==='overlay'){fechar()}}
+
+function comprar(){
+ alert('FORA DE ESTOQUE')
+}
+</script>
+
+</body>
+</html>
